@@ -3,7 +3,17 @@
  */
 jQuery(function($){
     // Initialize the flex slider
-    $('.flexslider').flexslider({});
+    $('.flexslider').not('#home-page-slider .flexslider').flexslider({});
+
+    // The home page slider works slightly differently
+    $('#home-page-slider .flexslider').flexslider({
+        before: function(args){
+            // Remove the old text stuff
+        },
+        after: function(args){
+
+        }
+    });
     
     /* Setup fitvids for entry content and panels */
     $('.entry-content, .entry-content .panel' ).fitVids();

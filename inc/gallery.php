@@ -2,8 +2,8 @@
 /**
  * Adds some functionality to theme galleries
  *
- * @package sostarter
- * @since sostarter 1.0
+ * @package estate
+ * @since estate 1.0
  * @license GPL 2.0
  */
 
@@ -15,7 +15,7 @@
  * @param $atts
  * @return string
  */
-function sostarter_gallery($contents, $attr){
+function estate_gallery($contents, $attr){
 	if(empty($attr['type']) || $attr['type'] != 'slider') return;
 	
 	global $post;
@@ -93,12 +93,12 @@ function sostarter_gallery($contents, $attr){
 	$return .= '<ul class="slides">';
 	foreach($attachments as $attachment){
 		$return .= '<li>';
-		$return .= apply_filters('sostarter_slide_before', '', $attachment);
+		$return .= apply_filters('estate_slide_before', '', $attachment);
 		$return .= wp_get_attachment_image($attachment->ID, $size, false, array('class' => 'slide-image'));
 		if($attachment->post_excerpt){
 			$return .= '<div class="flex-caption">' . $attachment->post_excerpt . '</div>';
 		}
-		$return .= apply_filters('sostarter_slide_after', '', $attachment);
+		$return .= apply_filters('estate_slide_after', '', $attachment);
 		$return .= '</li>';
 	}
 	$return .= '</ul>';
@@ -107,7 +107,7 @@ function sostarter_gallery($contents, $attr){
 
 	return $return;
 }
-add_filter('post_gallery', 'sostarter_gallery', 10, 2);
+add_filter('post_gallery', 'estate_gallery', 10, 2);
 
 /**
  * Add our fancy slider gallery to the list of gallery types.
@@ -115,13 +115,13 @@ add_filter('post_gallery', 'sostarter_gallery', 10, 2);
  * @param $types
  * @return mixed
  * 
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_gallery_types($types){
-	$types['slider'] = __('Slider', 'sostarter');
+function estate_gallery_types($types){
+	$types['slider'] = __('Slider', 'estate');
 	return $types;
 }
-add_filter('siteorigin_gallery_types', 'sostarter_gallery_types');
+add_filter('siteorigin_gallery_types', 'estate_gallery_types');
 
 /**
  * Set our fancy gallery to the default gallery type.
@@ -129,9 +129,9 @@ add_filter('siteorigin_gallery_types', 'sostarter_gallery_types');
  * @param $types
  * @return mixed
  * 
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_gallery_default_type(){
+function estate_gallery_default_type(){
 	return 'slider';
 }
-add_filter('siteorigin_gallery_default_type', 'sostarter_gallery_default_type');
+add_filter('siteorigin_gallery_default_type', 'estate_gallery_default_type');

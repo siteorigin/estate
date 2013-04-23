@@ -2,18 +2,18 @@
 /**
  * Custom template tags for this theme.
  *
- * @package sostarter
- * @since sostarter 1.0
+ * @package estate
+ * @since estate 1.0
  * @license GPL 2.0
  */
 
-if ( ! function_exists( 'sostarter_content_nav' ) ) :
+if ( ! function_exists( 'estate_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_content_nav( $nav_id ) {
+function estate_content_nav( $nav_id ) {
 	global $wp_query, $post;
 
 	// Don't print empty markup on single pages if there's nowhere to navigate.
@@ -35,21 +35,21 @@ function sostarter_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'sostarter' ); ?></h1>
+		<h1 class="assistive-text"><?php _e( 'Post navigation', 'estate' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'sostarter' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'sostarter' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'estate' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'estate' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sostarter' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'estate' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sostarter' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'estate' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -57,24 +57,24 @@ function sostarter_content_nav( $nav_id ) {
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
-endif; // sostarter_content_nav
+endif; // estate_content_nav
 
-if ( ! function_exists( 'sostarter_comment' ) ) :
+if ( ! function_exists( 'estate_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_comment( $comment, $args, $depth ) {
+function estate_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 			?>
 			<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'sostarter' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'sostarter' ), ' ' ); ?></p>
+				<p><?php _e( 'Pingback:', 'estate' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'estate' ), ' ' ); ?></p>
 			<?php
 			break;
 		default :
@@ -84,10 +84,10 @@ function sostarter_comment( $comment, $args, $depth ) {
 					<footer>
 						<div class="comment-author vcard">
 							<?php echo get_avatar( $comment, 40 ); ?>
-							<?php printf( __( '%s <span class="says">says:</span>', 'sostarter' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+							<?php printf( __( '%s <span class="says">says:</span>', 'estate' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 						</div><!-- .comment-author .vcard -->
 						<?php if ( $comment->comment_approved == '0' ) : ?>
-							<em><?php _e( 'Your comment is awaiting moderation.', 'sostarter' ); ?></em>
+							<em><?php _e( 'Your comment is awaiting moderation.', 'estate' ); ?></em>
 							<br />
 						<?php endif; ?>
 		
@@ -95,9 +95,9 @@ function sostarter_comment( $comment, $args, $depth ) {
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
 							<?php
 								/* translators: 1: date, 2: time */
-								printf( __( '%1$s at %2$s', 'sostarter' ), get_comment_date(), get_comment_time() ); ?>
+								printf( __( '%1$s at %2$s', 'estate' ), get_comment_date(), get_comment_time() ); ?>
 							</time></a>
-							<?php edit_comment_link( __( '(Edit)', 'sostarter' ), ' ' );
+							<?php edit_comment_link( __( '(Edit)', 'estate' ), ' ' );
 							?>
 						</div><!-- .comment-meta .commentmetadata -->
 					</footer>
@@ -113,32 +113,32 @@ function sostarter_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for sostarter_comment()
+endif; // ends check for estate_comment()
 
-if ( ! function_exists( 'sostarter_posted_on' ) ) :
+if ( ! function_exists( 'estate_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'sostarter' ),
+function estate_posted_on() {
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'estate' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'sostarter' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'estate' ), get_the_author() ) ),
 		get_the_author()
 	);
 }
 endif;
 
-if(!function_exists('sostarter_display_logo')):
+if(!function_exists('estate_display_logo')):
 /**
  * Display the logo 
  */
-function sostarter_display_logo(){
+function estate_display_logo(){
 	$logo = siteorigin_setting('general_logo');
 
 	if(empty($logo)) {
@@ -160,17 +160,17 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  *
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_categorized_blog() {
-	if ( false === ( $count = get_transient( 'sostarter_categorized_blog_cache_count' ) ) ) {
+function estate_categorized_blog() {
+	if ( false === ( $count = get_transient( 'estate_categorized_blog_cache_count' ) ) ) {
 		// Count the number of non-empty categories
 		$count = count( get_categories( array(
 			'hide_empty' => 1,
 		) ) );
 		
 		// Count the number of categories that are attached to the posts
-		set_transient( 'sostarter_categorized_blog_cache_count', $count );
+		set_transient( 'estate_categorized_blog_cache_count', $count );
 	}
 	
 	// Return true if this blog has categories, or else false.
@@ -178,82 +178,83 @@ function sostarter_categorized_blog() {
 }
 
 /**
- * Flush out the transients used in sostarter_categorized_blog
+ * Flush out the transients used in estate_categorized_blog
  *
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_category_transient_flusher() {
-	delete_transient( 'sostarter_categorized_blog_cache_count' );
+function estate_category_transient_flusher() {
+	delete_transient( 'estate_categorized_blog_cache_count' );
 }
-add_action( 'edit_category', 'sostarter_category_transient_flusher' );
-add_action( 'save_post', 'sostarter_category_transient_flusher' );
+add_action( 'edit_category', 'estate_category_transient_flusher' );
+add_action( 'save_post', 'estate_category_transient_flusher' );
 
 /**
  * Return the archive title depending on which page is being displayed.
  * 
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_get_archive_title(){
+function estate_get_archive_title(){
 	$title = '';
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category Archives: %s', 'sostarter' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+		$title = sprintf( __( 'Category Archives: %s', 'estate' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
 	}
 	elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag Archives: %s', 'sostarter' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+		$title = sprintf( __( 'Tag Archives: %s', 'estate' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
 	}
 	elseif ( is_author() ) {
 		the_post();
-		$title = sprintf( __( 'Author Archives: %s', 'sostarter' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+		$title = sprintf( __( 'Author Archives: %s', 'estate' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 		rewind_posts();
 
 	}
 	elseif ( is_day() ) {
-		$title = sprintf( __( 'Daily Archives: %s', 'sostarter' ), '<span>' . get_the_date() . '</span>' );
+		$title = sprintf( __( 'Daily Archives: %s', 'estate' ), '<span>' . get_the_date() . '</span>' );
 
 	}
 	elseif ( is_month() ) {
-		$title = sprintf( __( 'Monthly Archives: %s', 'sostarter' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+		$title = sprintf( __( 'Monthly Archives: %s', 'estate' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 	}
 	elseif ( is_year() ) {
-		$title = sprintf( __( 'Yearly Archives: %s', 'sostarter' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+		$title = sprintf( __( 'Yearly Archives: %s', 'estate' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 	}
 	else {
-		$title = __( 'Archives', 'sostarter' );
+		$title = __( 'Archives', 'estate' );
 	}
 	
-	return apply_filters('sostarter_archive_title', $title);
+	return apply_filters('estate_archive_title', $title);
 }
 
 /**
  * Get the post meta.
  * 
- * @since sostarter 1.0
+ * @since estate 1.0
  */
-function sostarter_get_post_meta(){
+function estate_get_post_meta(){
 	/* translators: used between list items, there is a space after the comma */
-	$category_list = get_the_category_list( __( ', ', 'sostarter' ) );
+	$category_list = get_the_category_list( __( ', ', 'estate' ) );
 
 	/* translators: used between list items, there is a space after the comma */
-	$tag_list = get_the_tag_list( '', __( ', ', 'sostarter' ) );
+	$tag_list = get_the_tag_list( '', __( ', ', 'estate' ) );
 
-	if ( ! sostarter_categorized_blog() ) {
+	if ( ! estate_categorized_blog() ) {
 		// This blog only has 1 category so we just need to worry about tags in the meta text
 		if ( '' != $tag_list ) {
-			$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'sostarter' );
-		} else {
-			$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'sostarter' );
+			$meta_text = __( 'Ttagged %2$s.', 'estate' );
+		}
+		else {
+			$meta_text = '';
 		}
 
 	} else {
 		// But this blog has loads of categories so we should probably display them here
 		if ( '' != $tag_list ) {
-			$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'sostarter' );
+			$meta_text = __( 'Posted in %1$s and tagged %2$s.', 'estate' );
 		} else {
-			$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'sostarter' );
+			$meta_text = __( 'Posted in %1$s.', 'estate' );
 		}
 
 	} // end check for categories on this blog
@@ -261,12 +262,10 @@ function sostarter_get_post_meta(){
 	$meta = sprintf(
 		$meta_text,
 		$category_list,
-		$tag_list,
-		get_permalink(),
-		the_title_attribute( 'echo=0' )
+		$tag_list
 	);
 	
-	return apply_filters('sostarter_post_meta', $meta);
+	return apply_filters('estate_post_meta', $meta);
 }
 
 /**
@@ -275,7 +274,7 @@ function sostarter_get_post_meta(){
  * @param null $post
  * @return string
  */
-function sostarter_next_attachment_url($post = null){
+function estate_next_attachment_url($post = null){
 	if(empty($post)){
 		global $post;
 	}

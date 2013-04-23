@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package sostarter
- * @since sostarter 1.0
+ * @package estate
+ * @since estate 1.0
  * @license GPL 2.0
  */
 
@@ -18,31 +18,9 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
 
-		<?php if( is_home() && $GLOBALS['wp_query']->get('paged') == 0 && siteorigin_setting('home_slider') && class_exists('SiteOrigin_Slider_Widget') ) : ?>
-			<?php
-			the_widget(
-				'SiteOrigin_Slider_Widget',
-				array(
-					'slider_id' => siteorigin_setting('home_slider'),
-				),
-				array(
-					'before_widget' => '<div id="home-page-slider">',
-					'after_widget' => '</div>',
-				)
-			);
-			?>
-		<?php endif ?>
-
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', get_post_format() ); ?>
-
-			<?php endwhile; ?>
-
-			<?php sostarter_content_nav( 'nav-below' ); ?>
+			<?php get_template_part('loop') ?>
 
 		<?php else : ?>
 

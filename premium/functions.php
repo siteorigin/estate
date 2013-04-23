@@ -13,16 +13,16 @@ include get_template_directory() . '/premium/extras/customizer/customizer.php';
 include get_template_directory() . '/premium/inc/settings.php';
 include get_template_directory() . '/premium/inc/customizer.php';
 
-function sostarter_premium_setup(){
+function estate_premium_setup(){
 	if(siteorigin_setting('general_ajax_comments')) siteorigin_ajax_comments_activate();
 	if(siteorigin_setting('layout_responsive_menu')) add_theme_support('siteorigin-mobilenav');
 	
 	// We'll support all the premium widgets
 	add_action('widgets_init', 'siteorigin_widgets_premium_register');
 }
-add_action('after_setup_theme', 'sostarter_premium_setup', 15);
+add_action('after_setup_theme', 'estate_premium_setup', 15);
 
-function sostarter_premium_remove_credits(){
+function estate_premium_remove_credits(){
 	return '';
 }
-add_filter('sostarter_credits_siteorigin', 'sostarter_premium_remove_credits');
+add_filter('estate_credits_siteorigin', 'estate_premium_remove_credits');

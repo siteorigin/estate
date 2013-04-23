@@ -2,8 +2,8 @@
 /**
  * This page just renders our blog archive. Mainly useful if we've created a custom home page and still want to make use of the blog archive.
  * 
- * @package sostarter
- * @since sostarter 1.0
+ * @package estate
+ * @since estate 1.0
  * 
  * Template Name: Blog Archive
  */
