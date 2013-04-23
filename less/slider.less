@@ -1,0 +1,65 @@
+/* =Sliders
+----------------------------------------------- */
+
+/* Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {
+	outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Necessary Styles */
+
+.flexslider {
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+
+	.slides {
+		list-style:none;
+		zoom: 1;
+		.clearfix();
+		
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	
+	.slides > li {
+		margin-left: 0;
+		display: none;
+		-webkit-backface-visibility: hidden;
+	}
+
+	.flex-control-nav {
+		list-style:none;
+
+		li {
+			margin:0;
+			padding:0;
+		}
+		
+		li a{
+			cursor:pointer;
+		}
+	}
+	
+	.flex-direction-nav {
+		list-style:none;
+		
+		li {
+			margin:0;
+			padding:0;
+		}
+	}
+}
