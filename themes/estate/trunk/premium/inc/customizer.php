@@ -2,6 +2,6 @@
 /**
  * Setup customizer controls.
  *
- * @package sostarter
+ * @package estate
  * @since 1.0 
  */

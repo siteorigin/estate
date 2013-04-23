@@ -2,8 +2,8 @@
 /**
  * The template for displaying the home page panel. Requires SiteOrigin page builder plugin.
  *
- * @package sostarter
- * @since sostarter 1.0
+ * @package estate
+ * @since estate 1.0
  * @see http://siteorigin.com/page-builder/
  * @license GPL 2.0
  */

@@ -2,7 +2,7 @@
 /**
  * Integrates this theme with SiteOrigin panels page builder.
  * 
- * @package sostarter
+ * @package estate
  * @since 1.0
  * @license GPL 2.0
  */
@@ -12,10 +12,10 @@
  *
  * @param $layouts
  */
-function sostarter_prebuilt_page_layouts($layouts){
+function estate_prebuilt_page_layouts($layouts){
 	return $layouts;
 }
-add_filter('siteorigin_panels_prebuilt_layouts', 'sostarter_prebuilt_page_layouts');
+add_filter('siteorigin_panels_prebuilt_layouts', 'estate_prebuilt_page_layouts');
 
 /**
  * Configure the SiteOrigin page builder settings.
@@ -23,8 +23,8 @@ add_filter('siteorigin_panels_prebuilt_layouts', 'sostarter_prebuilt_page_layout
  * @param $settings
  * @return mixed
  */
-function sostarter_panels_settings($settings){
+function estate_panels_settings($settings){
 	$settings['home-page'] = true;
 	return $settings;
 }
-add_filter('sitesiteorigin_panels_settings', 'sostarter_panels_settings');
+add_filter('sitesiteorigin_panels_settings', 'estate_panels_settings');
