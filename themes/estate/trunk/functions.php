@@ -11,7 +11,7 @@ define('SITEORIGIN_THEME_VERSION', 'trunk');
 define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.dynalias.com');
 
 if( file_exists( get_template_directory() . '/premium/functions.php' ) ){
-	// include get_template_directory() . '/premium/functions.php';
+	include get_template_directory() . '/premium/functions.php';
 }
 
 // Include all the SiteOrigin extras
