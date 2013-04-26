@@ -2,7 +2,7 @@
 Theme Name: Estate
 Author: SiteOrigin
 Author URI: http://siteorigin.com/
-Description: Starter theme
+Description: A general purpose theme with a clean, professional layout.
 Version: trunk
 License: GNU General Public License 2.0
 License URI: license.txt
@@ -353,25 +353,6 @@ textarea {
 	}
 }
 
-
-/* =Responsive Layout
------------------------------------------------ */
-
-/* We consider 680px to be mobile resolution */
-@media (max-width:680px) {
-	body.responsive {
-		#footer-widgets .widget {
-			display: block;
-			margin-bottom: 25px;
-			float:none;
-		}
-
-		#footer-widgets .widget:last-child{
-			margin-bottom:0;
-		}
-	}
-}
-
 /* =Menu
 ----------------------------------------------- */
 
@@ -388,6 +369,7 @@ textarea {
 	}
 
 	ul {
+		.clearfix();
 		font-size: 13px;
 		list-style: none;
 		margin: 0;
@@ -395,8 +377,9 @@ textarea {
 	}
 
 	li {
-		display:inline-block;
+		display:block;
 		position: relative;
+		float:left;
 
 		&:last-child {
 			margin-right: 0;
@@ -443,6 +426,7 @@ textarea {
 
 			li {
 				background: #222;
+				float:none;
 
 				&:first-child {
 					/* A subtle little shadow */
@@ -477,6 +461,24 @@ textarea {
 			display: block;
 		}
 	}
+
+	#searchform {
+		float: right;
+		margin: 10px 0 0 0;
+
+		#s {
+			outline: none;
+			.rounded(4px);
+			.bordered(#101010,#080808,#000000,#080808);
+			padding: 6px 14px;
+			border: 1px solid #222;
+			.gradient(#2a2a2a,#1a1a1a,#2a2a2a);
+			font-size: 12px;
+			font-weight: bold;
+			.box-shadow(inset 1px 1px 1px rgba(0,0,0,0.15));
+			color: #CCC;
+		}
+	}
 }
 
 /* =Layout
@@ -498,6 +500,7 @@ textarea {
 		width: 100%;
 		height: auto;
 		opacity: 0.3;
+		pointer-events:none;
 	}
 }
 
@@ -567,6 +570,15 @@ textarea {
 article.sticky{
 /* Style a sticky post */
 }
+
+.page-header {
+	h1 {
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 25px;
+	}
+}
+
 
 /* =Entry Content
 ----------------------------------------------- */
@@ -847,6 +859,14 @@ article.sticky{
 	}
 }
 
+/* =Page Templates
+----------------------------------------------- */
+
+body.page-template-template-full-php #primary {
+	width: auto;
+	padding-right: 0;
+}
+
 /* =Navigation
 ----------------------------------------------- */
 
@@ -873,15 +893,87 @@ article.sticky{
 /* =Comments
 ----------------------------------------------- */
 
+#comments-title, #reply-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	line-height: 1em;
+}
+
 #comments {
 
+	max-width: 680px;
+	margin: 40px auto 0 auto;
 
 	.commentlist {
+		margin: 0 0 40px 0;
+		list-style: none;
+
+		.children {
+			list-style: none;
+			margin-left: 95px;
+		}
+
+		article {
+			padding: 20px;
+			margin-bottom: 30px;
+			background: #F9F9F9;
+
+			.avatar {
+				float: left;
+			}
+
+			.comment-author, .awaiting-moderation, .comment-meta, .comment-content {
+				margin-left: 75px;
+			}
+
+			.comment-author{
+				color: #666;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 1em;
+				margin-bottom: 5px;
+
+				a{
+					color: inherit;
+					text-decoration: none;
+				}
+
+				cite {
+					font-style: normal;
+				}
+			}
+
+			.comment-meta {
+				font-size: 13px;
+				color: #999;
+				line-height: 1em;
+				margin-bottom: 10px;
+
+				a{
+					color: inherit;
+					text-decoration: none;
+				}
+
+				.support {
+					display: inline-block;
+					margin-left: 15px;
+				}
+			}
+
+			.awaiting-moderation {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+
 		.bypostauthor{
 		/* Change the comment by the post author */
 		}
 	}
 }
+
+
 
 #commentform{
 
@@ -889,13 +981,24 @@ article.sticky{
 		margin-top: 2px;
 		display:block;
 		float: left;
-		width: 20%;
+		width: 25%;
 	}
 
 	input, textarea {
 		float: left;
-		width: 80%;
+		width: 75%;
+		padding: 10px;
+		font-size: 13px;
 	}
+
+	textarea {
+		padding: 10px;
+	}
+
+	input {
+		padding: 7px 10px;
+	}
+
 
 	p {
 		.clearfix();
@@ -907,10 +1010,11 @@ article.sticky{
 	}
 
 	#submit {
+		padding: 10px 30px;
 		width: auto;
 	}
 
-	.form-allowed-tags, .form-allowed-tags code {
+	.form-allowed-tags, .form-allowed-tags code, .comment-notes {
 		font-size: 0.8em;
 		color: #999;
 	}
@@ -920,6 +1024,10 @@ article.sticky{
 		color: #999;
 		margin-bottom: 10px;
 		text-align: right;
+	}
+
+	.required {
+		color: #A40802;
 	}
 }
 
@@ -931,14 +1039,22 @@ article.sticky{
 #footer-widgets {
 	.clearfix();
 
-	margin: 0 -15px;
 	max-width: 100%;
+	padding: 0 15px;
 
 	aside.widget {
+		font-size: 15px;
 		.box-sizing(border-box);
 		float: right;
-		padding: 0 15px;
+		padding: 30px 15px;
 		margin-bottom:0;
+		color: #999;
+
+		.widget-title {
+			font-size: 15px;
+			color: #CCC;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -947,7 +1063,6 @@ article.sticky{
 
 	.container {
 		position: relative;
-		min-height: 250px;
 		background: #333;
 
 		#footer-shadow {
@@ -956,6 +1071,7 @@ article.sticky{
 			left: 0;
 			width: 100%;
 			height: auto;
+			pointer-events:none;
 		}
 	}
 

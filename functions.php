@@ -11,7 +11,7 @@ define('SITEORIGIN_THEME_VERSION', 'trunk');
 define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.dynalias.com');
 
 if( file_exists( get_template_directory() . '/premium/functions.php' ) ){
-	//include get_template_directory() . '/premium/functions.php';
+	include get_template_directory() . '/premium/functions.php';
 }
 
 // Include all the SiteOrigin extras
@@ -24,7 +24,6 @@ include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/update/update.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
 include get_template_directory() . '/extras/widgets/widgets.php';
-include get_template_directory() . '/extras/panels-lite/panels-lite.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
 
 // Load the theme specific files
@@ -86,9 +85,11 @@ function estate_setup() {
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
+	/*
 	if(!defined('SITEORIGIN_PANELS_VERSION')){
 		include get_template_directory() . '/extras/panels-lite/panels-lite.php';
 	}
+	*/
 }
 endif; // estate_setup
 add_action( 'after_setup_theme', 'estate_setup' );
@@ -151,7 +152,7 @@ function estate_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'estate-main' , get_template_directory_uri().'/js/jquery.theme-main.js' , array('jquery', 'estate-flexslider', 'estate-fitvids'), SITEORIGIN_THEME_VERSION );
-	wp_enqueue_script( 'estate-homeslider' , get_template_directory_uri().'/js/homeslider.js' , array('jquery'), SITEORIGIN_THEME_VERSION );
+	wp_enqueue_script( 'estate-top-slider' , get_template_directory_uri().'/js/top-slider.js' , array('jquery'), SITEORIGIN_THEME_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
