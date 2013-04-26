@@ -26,3 +26,31 @@ function estate_premium_remove_credits(){
 	return '';
 }
 add_filter('estate_credits_siteorigin', 'estate_premium_remove_credits');
+
+/**
+ * This overwrites the show on front setting when we're displaying the blog archive page.
+ *
+ * @param $r
+ * @return bool
+ */
+function estate_filter_show_on_front($r){
+	/**
+	 * @var WP_Query
+	 */
+	global $estate_is_blog_archive;
+	if(!empty($estate_is_blog_archive)) {
+		return false;
+	}
+	else return $r;
+}
+add_filter('option_show_on_front', 'estate_filter_show_on_front');
+
+/**
+ * Sets when we're displaying the blog archive page.
+ *
+ * @param $new
+ */
+function estate_set_is_blog_archive($new) {
+	global $estate_is_blog_archive;
+	$estate_is_blog_archive = $new;
+}

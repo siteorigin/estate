@@ -36,10 +36,15 @@ function estate_theme_settings(){
 		'description' => __('Keep your conversations flowing with ajax comments.', 'estate')
 	));
 
+	siteorigin_settings_add_field('general', 'menu_search', 'checkbox', __('Menu Search', 'estate'), array(
+		'description' => __('Display a search input in the main menu.', 'estate')
+	));
+
 	/**
 	 * Home Page
 	 */
 
+	/*
 	$slider_options = array('' => __('None', 'estate'), 'demo' => __('Demo', 'estate'));
 	if(function_exists('siteorigin_slider_get_sliders')){
 		$sliders = siteorigin_slider_get_sliders();
@@ -59,6 +64,7 @@ function estate_theme_settings(){
 		'description' =>$description,
 		'options' => $slider_options
 	));
+	*/
 
 	/**
 	 * Layout Settings
@@ -85,7 +91,8 @@ function estate_theme_setting_defaults($defaults){
 	$defaults['general_logo'] = '';
 	$defaults['general_ajax_comments'] = false;
 	$defaults['general_site_description'] = true;
-	
+	$defaults['general_menu_search'] = false;
+
 	$defaults['home_slider'] = 'demo';
 
 	$defaults['layout_responsive'] = true;

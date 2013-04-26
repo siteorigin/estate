@@ -49,8 +49,45 @@ function estate_slider_fields(){
 	</tr>
 	<?php
 }
-
 add_action('siteorigin_slider_after_builder_form', 'estate_slider_fields');
+
+function estate_display_top_slider(){
+	if( is_front_page() && $GLOBALS['wp_query']->get('paged') == 0 && siteorigin_setting('home_slider') == 'demo' ) {
+		?>
+		<div id="top-slider">
+			<div class="decoration"></div>
+			<?php estate_home_slider_demo_render() ?>
+		</div>
+	<?php
+	}
+	elseif( is_home() && $GLOBALS['wp_query']->get('paged') == 0 && siteorigin_setting('home_slider') && class_exists('SiteOrigin_Slider_Widget') ) {
+		the_widget(
+			'SiteOrigin_Slider_Widget',
+			array(
+				'slider_id' => siteorigin_setting('home_slider'),
+				'render_callback' => 'estate_home_slider_custom_render',
+			),
+			array(
+				'before_widget' => '<div id="top-slider"><div class="decoration"></div>',
+				'after_widget' => '</div>',
+			)
+		);
+	}
+	elseif(is_single() && get_post_meta(get_the_ID(), 'estate_slider_display', true)) {
+		// Display this page's slider
+		the_widget(
+			'SiteOrigin_Slider_Widget',
+			array(
+				'slider_id' => siteorigin_setting('home_slider'),
+				'render_callback' => 'estate_home_slider_custom_render',
+			),
+			array(
+				'before_widget' => '<div id="top-slider"><div class="decoration"></div>',
+				'after_widget' => '</div>',
+			)
+		);
+	}
+}
 
 /**
  * Custom render function for the home page slider.

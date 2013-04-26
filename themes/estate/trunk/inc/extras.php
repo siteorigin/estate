@@ -81,8 +81,6 @@ add_filter( 'wp_title', 'estate_wp_title', 10, 2 );
 
 /**
  * Add the styles to set the size of the footer widgets
- * 
- * @todo generate responsive code
  */
 function estate_footer_widget_style(){
 	$widgets = wp_get_sidebars_widgets();
