@@ -8,7 +8,7 @@ function estate_slider_fields(){
 	?>
 	<tr>
 		<td>
-			<strong>Home Slider Settings</strong>
+			<strong><?php _e('Home Slider Settings', 'estate') ?></strong>
 		</td>
 	</tr>
 	<tr valign="top">
