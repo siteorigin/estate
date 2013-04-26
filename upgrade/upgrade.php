@@ -6,7 +6,7 @@ function estate_premium_upgrade_content($content){
 	$content['premium_title'] = sprintf( __('Upgrade To %s Premium', 'estate'), $themename );
 	$content['premium_summary'] = sprintf(__('If you\'ve enjoyed using %1$s, you\'re going to love %1$s Premium. It\'s a robust upgrade to estate that gives you loads of cool features. For just a few dollars. A cost effective way to give your site a professional edge.', 'estate'), $themename);
 
-	$content['buy_url'] = 'http://siteorigin.com/theme/'.get_option('stylesheet').'/?redirect=premium_upgrade';
+	$content['buy_url'] = '';
 	$content['buy_price'] = '$9';
 	$content['buy_button'] = get_template_directory_uri().'/upgrade/images/button.png';
 	$content['buy_message_1'] = sprintf(__("If you're not delighted with %s Premium, I'll give you a full refund", 'estate'), $themename);
