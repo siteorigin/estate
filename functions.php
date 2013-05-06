@@ -10,21 +10,12 @@
 define('SITEORIGIN_THEME_VERSION', 'trunk');
 define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.dynalias.com');
 
-if( file_exists( get_template_directory() . '/premium/functions.php' ) ){
-	include get_template_directory() . '/premium/functions.php';
-}
-
-// Include all the SiteOrigin extras
-if(!defined('SITEORIGIN_IS_PREMIUM')) {
-	// include get_template_directory() . '/upgrade/upgrade.php';
-}
-
 include get_template_directory() . '/extras/premium/premium.php';
 include get_template_directory() . '/extras/settings/settings.php';
-include get_template_directory() . '/extras/update/update.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
 include get_template_directory() . '/extras/widgets/widgets.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
+include get_template_directory() . '/extras/updater/updater.php';
 
 // Load the theme specific files
 include get_template_directory() . '/inc/panels.php';
@@ -85,11 +76,9 @@ function estate_setup() {
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
-	/*
 	if(!defined('SITEORIGIN_PANELS_VERSION')){
 		include get_template_directory() . '/extras/panels-lite/panels-lite.php';
 	}
-	*/
 }
 endif; // estate_setup
 add_action( 'after_setup_theme', 'estate_setup' );
