@@ -1470,6 +1470,9 @@ body.page-template-template-full-php #primary {
 }
 /* =General Widget Styling
 ----------------------------------------------- */
+.widget {
+  word-wrap: break-word;
+}
 .widget img,
 .widget embed,
 .widget iframe,
