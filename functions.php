@@ -8,7 +8,7 @@
  */
 
 define('SITEORIGIN_THEME_VERSION', 'trunk');
-define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.dynalias.com');
+define('SITEORIGIN_THEME_UPDATE_ID', 279);
 
 include get_template_directory() . '/extras/premium/premium.php';
 include get_template_directory() . '/extras/settings/settings.php';
@@ -76,7 +76,8 @@ function estate_setup() {
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
-	if(!defined('SITEORIGIN_PANELS_VERSION')){
+	if(!is_dir(WP_PLUGIN_DIR.'/siteorigin-panels')){
+		// Only include panels lite if the panels plugin doesn't exist
 		include get_template_directory() . '/extras/panels-lite/panels-lite.php';
 	}
 }
