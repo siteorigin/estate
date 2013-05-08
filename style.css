@@ -150,6 +150,9 @@ a img {
 /* =Global
 ----------------------------------------------- */
 /* Consistent fonts across all elements */
+body {
+  background: #f1f1f1;
+}
 body,
 button,
 input,
