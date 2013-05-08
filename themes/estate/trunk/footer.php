@@ -25,7 +25,7 @@
 	<div id="site-info">
 		<div class="container">
 			<?php do_action( 'estate_credits' ); ?>
-			<?php echo apply_filters( 'estate_credits_siteorigin', sprintf( __( 'Designed by %1$s.', 'estate' ), '<a href="http://siteorigin.com/" rel="designer">SiteOrigin</a>' ) ); ?>
+			<?php echo apply_filters( 'siteorigin_attribution_footer', sprintf( __( 'Designed by %1$s.', 'estate' ), '<a href="http://siteorigin.com/" rel="designer">SiteOrigin</a>' ) ); ?>
 		</div>
 	</div><!-- .site-info -->
 </div><!-- #page .hfeed .site -->
