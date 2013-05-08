@@ -177,6 +177,9 @@ function estate_premium_body_class($classes){
 }
 add_filter('body_class', 'estate_premium_body_class');
 
+/**
+ * Add fixes for older version of Internet Explorer
+ */
 function estate_wp_head(){
 	?>
 	<!--[if lt IE 9]>
