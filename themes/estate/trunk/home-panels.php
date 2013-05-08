@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area panels-home">
 	<div id="content" class="site-content" role="main">
 		<div class="entry-content">
 			<?php if(function_exists('siteorigin_panels_render')) echo siteorigin_panels_render('home'); ?>

@@ -82,33 +82,32 @@ function estate_comment( $comment, $args, $depth ) {
 			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 				<article id="comment-<?php comment_ID(); ?>" class="comment">
 					<footer>
-						<div class="comment-author vcard">
-							<?php echo get_avatar( $comment, 40 ); ?>
-							<?php printf( __( '%s <span class="says">says:</span>', 'estate' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-						</div><!-- .comment-author .vcard -->
-						<?php if ( $comment->comment_approved == '0' ) : ?>
-							<em><?php _e( 'Your comment is awaiting moderation.', 'estate' ); ?></em>
-							<br />
-						<?php endif; ?>
-		
+						<?php echo get_avatar( $comment, 50 ); ?>
+						<div class="comment-author">
+							<cite class="fn"><?php comment_author_link() ?></cite>
+						</div><!-- .comment-author -->
+
+
 						<div class="comment-meta commentmetadata">
-							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
-							<?php
-								/* translators: 1: date, 2: time */
-								printf( __( '%1$s at %2$s', 'estate' ), get_comment_date(), get_comment_time() ); ?>
-							</time></a>
-							<?php edit_comment_link( __( '(Edit)', 'estate' ), ' ' );
-							?>
+							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>"><?php
+									/* translators: 1: date, 2: time */
+									printf( __( '%1$s at %2$s', 'portal' ), get_comment_date(), get_comment_time() );
+									?></time></a>
+
+							<span class="support">
+								<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+								<?php edit_comment_link( __( 'Edit', 'portal' ), ' ' ); ?>
+							</span>
 						</div><!-- .comment-meta .commentmetadata -->
+
+						<?php if ( $comment->comment_approved == '0' ) : ?>
+							<em class="awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'portal' ); ?></em>
+						<?php endif; ?>
 					</footer>
-		
+
 					<div class="comment-content entry-content"><?php comment_text(); ?></div>
-		
-					<div class="reply">
-						<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-					</div><!-- .reply -->
 				</article><!-- #comment-## -->
-		
+
 			<?php
 			break;
 	endswitch;
