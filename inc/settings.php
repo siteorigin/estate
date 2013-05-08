@@ -16,7 +16,7 @@
  */
 function estate_theme_settings(){
 	siteorigin_settings_add_section('general', __('General', 'estate'));
-	siteorigin_settings_add_section('home', __('Home Page', 'estate'));
+	// siteorigin_settings_add_section('home', __('Home Page', 'estate'));
 	siteorigin_settings_add_section('layout', __('Layout', 'estate'));
 
 	/**
@@ -32,10 +32,6 @@ function estate_theme_settings(){
 		'description' => __('Display your site description under your logo.', 'estate')
 	));
 	
-	siteorigin_settings_add_teaser('general', 'ajax_comments', __('Ajax Comments', 'estate'), array(
-		'description' => __('Keep your conversations flowing with ajax comments.', 'estate')
-	));
-
 	siteorigin_settings_add_field('general', 'menu_search', 'checkbox', __('Menu Search', 'estate'), array(
 		'description' => __('Display a search input in the main menu.', 'estate')
 	));
@@ -74,9 +70,6 @@ function estate_theme_settings(){
 		'description' => __('Scale your layout for small screen devices.', 'estate')
 	));
 	
-	siteorigin_settings_add_teaser('layout', 'responsive_menu', __('Responsive Menu', 'estate'), array(
-		'description' => __('Use a special responsive menu for small screen devices.', 'estate')
-	));
 }
 add_action('admin_init', 'estate_theme_settings');
 
@@ -89,14 +82,12 @@ add_action('admin_init', 'estate_theme_settings');
  */
 function estate_theme_setting_defaults($defaults){
 	$defaults['general_logo'] = '';
-	$defaults['general_ajax_comments'] = false;
 	$defaults['general_site_description'] = true;
 	$defaults['general_menu_search'] = false;
 
-	$defaults['home_slider'] = 'demo';
+	// $defaults['home_slider'] = 'demo';
 
 	$defaults['layout_responsive'] = true;
-	$defaults['layout_responsive_menu'] = true;
 
 	return $defaults;
 }
