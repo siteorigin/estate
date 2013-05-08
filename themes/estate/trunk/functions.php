@@ -68,6 +68,16 @@ function estate_setup() {
 
 	// Enable support for Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Support SiteOrigin Page Builder
+	 */
+	add_theme_support( 'siteorigin-panels', array(
+		'margin-bottom' => 30,
+		'responsive' => false,
+		'home-page' => true,
+		'home-page-default' => false,
+	) );
 	
 	// We want to use all of SiteOrigin's widgets.
 	add_action('widgets_init', 'siteorigin_widgets_init');
@@ -161,7 +171,8 @@ add_action( 'wp_enqueue_scripts', 'estate_scripts' );
  * @since 1.0
  */
 function estate_premium_body_class($classes){
-	if(siteorigin_setting('layout_responsive')) $classes[] = 'responsive';
+	// We'll add responsive layout in a future release.
+	//if(siteorigin_setting('layout_responsive')) $classes[] = 'responsive';
 	return $classes;
 }
 add_filter('body_class', 'estate_premium_body_class');
