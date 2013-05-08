@@ -17,7 +17,6 @@
 function estate_theme_settings(){
 	siteorigin_settings_add_section('general', __('General', 'estate'));
 	// siteorigin_settings_add_section('home', __('Home Page', 'estate'));
-	siteorigin_settings_add_section('layout', __('Layout', 'estate'));
 
 	/**
 	 * General Settings
@@ -62,14 +61,6 @@ function estate_theme_settings(){
 	));
 	*/
 
-	/**
-	 * Layout Settings
-	 */
-
-	siteorigin_settings_add_field('layout', 'responsive', 'checkbox', __('Responsive Layout', 'estate'), array(
-		'description' => __('Scale your layout for small screen devices.', 'estate')
-	));
-	
 }
 add_action('admin_init', 'estate_theme_settings');
 
@@ -87,7 +78,7 @@ function estate_theme_setting_defaults($defaults){
 
 	// $defaults['home_slider'] = 'demo';
 
-	$defaults['layout_responsive'] = true;
+	$defaults['layout_responsive'] = false;
 
 	return $defaults;
 }

@@ -628,6 +628,9 @@ textarea {
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   color: #CCC;
 }
+.main-navigation #searchform #searchsubmit {
+  display: none;
+}
 /* =Layout
 ----------------------------------------------- */
 #main {
@@ -1497,6 +1500,18 @@ body.page-template-template-full-php #primary {
   border-left: solid 1px #8aad45;
   border-right: solid 1px #8aad45;
   border-bottom: solid 1px #7fa23a;
+}
+.widget a.button:hover {
+  background: #bfe277;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b5d86e), color-stop(1, #c9ec80));
+  background: -ms-linear-gradient(bottom, #b5d86e, #c9ec80);
+  background: -moz-linear-gradient(center bottom, #b5d86e 0%, #c9ec80 100%);
+  background: -o-linear-gradient(#c9ec80, #b5d86e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9ec80', endColorstr='#b5d86e', GradientType=0);
+  border-top: solid 1px #98bb52;
+  border-left: solid 1px #8db048;
+  border-right: solid 1px #8db048;
+  border-bottom: solid 1px #82a53d;
 }
 .widget .button-container.align-center {
   text-align: center;
