@@ -17,7 +17,7 @@ function estate_display_top_slider(){
 			<div id="top-slider">
 				<div class="decoration"></div>
 				<ul class="slides">
-					<li class="slide" style="background-image: url(<?php echo esc_url($image) ?>); background-color: <?php echo siteorigin_setting('banner_color') ?>">
+					<li class="slide" style="background-image: url(<?php echo esc_url($image) ?>); background-color: <?php echo esc_attr( siteorigin_setting('banner_color') ) ?>">
 						<div class="slide-contents home-title">
 							<?php if(siteorigin_setting('banner_title', '') != '') : ?><h2><?php echo esc_html(siteorigin_setting('banner_title', '')) ?></h2><?php endif; ?>
 							<?php if(siteorigin_setting('banner_subtitle', '') != '') : ?><h4><?php echo esc_html(siteorigin_setting('banner_subtitle', '')) ?></h4><?php endif; ?>
@@ -38,14 +38,14 @@ function estate_display_top_slider(){
 			<div id="top-slider">
 				<div class="decoration"></div>
 				<ul class="slides">
-					<li class="slide" style="background-color: <?php echo siteorigin_setting('banner_color') ?>">
+					<li class="slide" style="background-color: <?php echo esc_attr( siteorigin_setting('banner_color') ) ?>">
 						<div class="slide-contents home-title">
 							<?php if(siteorigin_setting('banner_title', '') != '') : ?><h2><?php echo esc_html(siteorigin_setting('banner_title', '')) ?></h2><?php endif; ?>
 							<?php if(siteorigin_setting('banner_subtitle', '') != '') : ?><h4><?php echo esc_html(siteorigin_setting('banner_subtitle', '')) ?></h4><?php endif; ?>
 
 							<?php if(siteorigin_setting('banner_button', '') != '') : ?>
 								<div class="slide-button">
-									<a href="<?php esc_attr(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html(siteorigin_setting('banner_button', '')) ?></a>
+									<a href="<?php esc_attr(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html( siteorigin_setting('banner_button', '') ) ?></a>
 								</div>
 							<?php endif; ?>
 						</div>

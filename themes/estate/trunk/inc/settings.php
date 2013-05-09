@@ -76,8 +76,6 @@ function estate_theme_setting_defaults($defaults){
 	$defaults['banner_button'] = __('Action Button', 'estate');
 	$defaults['banner_button_url'] = '#';
 
-	$defaults['layout_responsive'] = false;
-
 	return $defaults;
 }
 add_filter('siteorigin_theme_default_settings', 'estate_theme_setting_defaults');
