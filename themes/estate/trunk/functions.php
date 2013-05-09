@@ -9,6 +9,7 @@
 
 define('SITEORIGIN_THEME_VERSION', 'trunk');
 define('SITEORIGIN_THEME_UPDATE_ID', 279);
+define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.localhost');
 
 include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
