@@ -16,7 +16,7 @@
  */
 function estate_theme_settings(){
 	siteorigin_settings_add_section('general', __('General', 'estate'));
-	// siteorigin_settings_add_section('home', __('Home Page', 'estate'));
+	siteorigin_settings_add_section('banner', __('Home Banner', 'estate'));
 
 	/**
 	 * General Settings
@@ -39,27 +39,20 @@ function estate_theme_settings(){
 	 * Home Page
 	 */
 
-	/*
-	$slider_options = array('' => __('None', 'estate'), 'demo' => __('Demo', 'estate'));
-	if(function_exists('siteorigin_slider_get_sliders')){
-		$sliders = siteorigin_slider_get_sliders();
-		foreach($sliders as $slider){
-			$slider_options[$slider->ID] = $slider->post_title;
-		}
-		$description = null;
-	}
-	else{
-		$description = sprintf(
-			__('Display a slider on your home page. Requires <a href="%s">SiteOrigin Slider</a> plugin', 'estate'),
-			siteorigin_plugin_activation_install_url('siteorigin-slider', __('SiteOrigin Slider', 'estate'), 'http://gpriday.s3.amazonaws.com/plugins/siteorigin-slider.zip')
-		);
-	}
-
-	siteorigin_settings_add_field('home', 'slider', 'select', __('Home Page Slider', 'estate'), array(
-		'description' =>$description,
-		'options' => $slider_options
+	siteorigin_settings_add_field('banner', 'type', 'select', __('Home Page Banner', 'estate'), array(
+		'options' => array(
+			'' => __('None', 'estate'),
+			'title_banner' => __('Title Banner with Image', 'estate'),
+			'title_banner_noimage' => __('Title Banner without Image', 'estate'),
+		)
 	));
-	*/
+
+	siteorigin_settings_add_field('banner', 'image', 'media', __('Background Image', 'estate'));
+	siteorigin_settings_add_field('banner', 'color', 'color', __('Background Color', 'estate'));
+	siteorigin_settings_add_field('banner', 'title', 'text', __('Banner Title', 'estate'));
+	siteorigin_settings_add_field('banner', 'subtitle', 'text', __('Banner Subtitle', 'estate'));
+	siteorigin_settings_add_field('banner', 'button', 'text', __('Banner Button', 'estate'));
+	siteorigin_settings_add_field('banner', 'button_url', 'text', __('Banner Button URL', 'estate'));
 
 }
 add_action('admin_init', 'estate_theme_settings');
@@ -76,7 +69,12 @@ function estate_theme_setting_defaults($defaults){
 	$defaults['general_site_description'] = true;
 	$defaults['general_menu_search'] = false;
 
-	// $defaults['home_slider'] = 'demo';
+	$defaults['banner_type'] = 'title_banner';
+	$defaults['banner_color'] = '#1c1c1c';
+	$defaults['banner_title'] = __('Your Business Title Goes Here', 'estate');
+	$defaults['banner_subtitle'] = __('And a Subtitle To Describe What You Do', 'estate');
+	$defaults['banner_button'] = __('Action Button', 'estate');
+	$defaults['banner_button_url'] = '#';
 
 	$defaults['layout_responsive'] = false;
 
