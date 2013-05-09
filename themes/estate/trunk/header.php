@@ -47,7 +47,7 @@
 		</div></nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 
-	<?php // estate_display_top_slider() ?>
+	<?php estate_display_top_slider() ?>
 
 	<div id="main" class="site-main">
 		<img id="main-shadow" src="<?php echo get_template_directory_uri() ?>/images/decoration/footer-shadow.png" width="820" height="19" />
