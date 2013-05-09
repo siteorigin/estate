@@ -71,8 +71,8 @@ function estate_theme_setting_defaults($defaults){
 
 	$defaults['banner_type'] = 'title_banner';
 	$defaults['banner_color'] = '#1c1c1c';
-	$defaults['banner_title'] = __('Your Business Title Goes Here', 'estate');
-	$defaults['banner_subtitle'] = __('And a Subtitle To Describe What You Do', 'estate');
+	$defaults['banner_title'] = __('Your Banner Title Goes Here', 'estate');
+	$defaults['banner_subtitle'] = __('And a Subtitle, Maybe To Describe What You Do', 'estate');
 	$defaults['banner_button'] = __('Action Button', 'estate');
 	$defaults['banner_button_url'] = '#';
 
