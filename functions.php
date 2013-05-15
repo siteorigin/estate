@@ -136,8 +136,8 @@ add_action( 'widgets_init', 'estate_widgets_init' );
  * Register all the bundled scripts
  */
 function estate_register_scripts(){
-	wp_register_script( 'estate-flexslider' , get_template_directory_uri().'/js/jquery.flexslider.js' , array('jquery'), '2.1' );
-	wp_register_script( 'estate-fitvids' , get_template_directory_uri().'/js/jquery.fitvids.js' , array('jquery'), '1.0' );
+	wp_register_script( 'flexslider' , get_template_directory_uri().'/js/jquery.flexslider.js' , array('jquery'), '2.1' );
+	wp_register_script( 'fitvids' , get_template_directory_uri().'/js/jquery.fitvids.js' , array('jquery'), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'estate_register_scripts' , 5);
 
@@ -147,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'estate_register_scripts' , 5);
 function estate_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
-	wp_enqueue_script( 'estate-main' , get_template_directory_uri().'/js/jquery.theme-main.js' , array('jquery', 'estate-flexslider', 'estate-fitvids'), SITEORIGIN_THEME_VERSION );
+	wp_enqueue_script( 'estate-main' , get_template_directory_uri().'/js/jquery.theme-main.js' , array('jquery', 'flexslider', 'fitvids'), SITEORIGIN_THEME_VERSION );
 	wp_enqueue_script( 'estate-top-slider' , get_template_directory_uri().'/js/top-slider.js' , array('jquery'), SITEORIGIN_THEME_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
