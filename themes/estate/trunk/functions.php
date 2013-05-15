@@ -13,7 +13,6 @@ define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.localhost');
 
 include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
-include get_template_directory() . '/extras/widgets/widgets.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
 include get_template_directory() . '/extras/updater/updater.php';
 
@@ -80,9 +79,6 @@ function estate_setup() {
 		'home-page-default' => false,
 	) );
 	
-	// We want to use all of SiteOrigin's widgets.
-	add_action('widgets_init', 'siteorigin_widgets_init');
-
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
