@@ -91,17 +91,17 @@ function estate_comment( $comment, $args, $depth ) {
 						<div class="comment-meta commentmetadata">
 							<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>"><?php
 									/* translators: 1: date, 2: time */
-									printf( __( '%1$s at %2$s', 'portal' ), get_comment_date(), get_comment_time() );
+									printf( __( '%1$s at %2$s', 'estate' ), get_comment_date(), get_comment_time() );
 									?></time></a>
 
 							<span class="support">
 								<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-								<?php edit_comment_link( __( 'Edit', 'portal' ), ' ' ); ?>
+								<?php edit_comment_link( __( 'Edit', 'estate' ), ' ' ); ?>
 							</span>
 						</div><!-- .comment-meta .commentmetadata -->
 
 						<?php if ( $comment->comment_approved == '0' ) : ?>
-							<em class="awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'portal' ); ?></em>
+							<em class="awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'estate' ); ?></em>
 						<?php endif; ?>
 					</footer>
 
