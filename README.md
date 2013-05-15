@@ -1,6 +1,6 @@
 Estate General Purpose Theme
 ---------------
-This is a starter theme, based on _s with integration into SiteOrigin's extras framework.
+Estate is a free, general purpose theme.
 
 
 License
@@ -19,3 +19,10 @@ Change Log
 
 **1.0**
 Initial release.
+
+**1.0.1**
+General bug fixes.
+
+**1.0.2**
+Improved compatibility with latest version of Page Builder.
+All default widgets now available in Page Builder.
