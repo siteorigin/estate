@@ -761,7 +761,7 @@ article.sticky {
 ----------------------------------------------- */
 /* Styles for actual content */
 .entry {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .entry:last-child {
   margin-bottom: 0;
@@ -770,7 +770,7 @@ article.sticky {
   margin-bottom: 25px;
 }
 .entry .entry-header .entry-thumbnail {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 0;
 }
 .entry .entry-header .entry-thumbnail img {
@@ -988,7 +988,7 @@ article.sticky {
 /* =Page Templates
 ----------------------------------------------- */
 body.page-template-template-full-php #primary {
-  width: auto;
+  width: 100%;
   padding-right: 0;
 }
 /* =Navigation
