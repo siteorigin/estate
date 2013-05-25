@@ -153,6 +153,7 @@ a img {
 /* Consistent fonts across all elements */
 body {
   background: #f1f1f1;
+  word-wrap: break-word;
 }
 body,
 button,
@@ -161,7 +162,7 @@ select,
 textarea {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height: 1.5;
+  line-height: 1.5em;
   font-size: 14px;
 }
 /* Links */
@@ -497,7 +498,7 @@ textarea {
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
   border-top: 1px solid #101010;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #111111;
 }
 .main-navigation .noise {
   /* Add the gradient noise */
@@ -719,6 +720,16 @@ textarea {
 #secondary .widget ul a:hover,
 #secondary .widget ol a:hover {
   text-decoration: underline;
+}
+#secondary .widget ul ul,
+#secondary .widget ol ul,
+#secondary .widget ul ol,
+#secondary .widget ol ol {
+  margin-left: 1em;
+}
+#secondary .widget img {
+  max-width: 100%;
+  height: auto;
 }
 #secondary .widget #s,
 #secondary .widget #searchsubmit {
@@ -1162,6 +1173,9 @@ body.page-template-template-full-php #primary {
   font-size: 15px;
   color: #CCC;
   margin-bottom: 20px;
+}
+#footer-widgets aside.widget a {
+  color: #777;
 }
 #colophon {
   background: #404040;

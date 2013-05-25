@@ -82,10 +82,8 @@ function estate_setup() {
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
-	if(!is_dir(WP_PLUGIN_DIR.'/siteorigin-panels')){
-		// Only include panels lite if the panels plugin doesn't exist
-		include get_template_directory() . '/extras/panels-lite/panels-lite.php';
-	}
+	// Include the lite version of the page builder
+	if(!defined('SITEORIGIN_PANELS_VERSION')) include get_template_directory().'/extras/panels-lite/panels-lite.php';
 }
 endif; // estate_setup
 add_action( 'after_setup_theme', 'estate_setup' );

@@ -27,3 +27,8 @@ General bug fixes.
 Improved compatibility with latest version of Page Builder.
 All default widgets now available in Page Builder.
 Fixed full width template.
+
+**1.0.3**
+Fixes some theme settings.
+Updated to latest framework.
+CSS improvements.

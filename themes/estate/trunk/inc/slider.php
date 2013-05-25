@@ -24,7 +24,7 @@ function estate_display_top_slider(){
 
 							<?php if(siteorigin_setting('banner_button', '') != '') : ?>
 								<div class="slide-button">
-									<a href="<?php esc_attr(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html(siteorigin_setting('banner_button', '')) ?></a>
+									<a href="<?php echo esc_url(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html(siteorigin_setting('banner_button', '')) ?></a>
 								</div>
 							<?php endif; ?>
 						</div>
@@ -45,7 +45,7 @@ function estate_display_top_slider(){
 
 							<?php if(siteorigin_setting('banner_button', '') != '') : ?>
 								<div class="slide-button">
-									<a href="<?php esc_attr(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html( siteorigin_setting('banner_button', '') ) ?></a>
+									<a href="<?php echo esc_url(siteorigin_setting('banner_button_url')) ?>" class="action-button"><?php echo esc_html( siteorigin_setting('banner_button', '') ) ?></a>
 								</div>
 							<?php endif; ?>
 						</div>
