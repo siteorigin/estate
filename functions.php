@@ -30,7 +30,7 @@ include get_template_directory() . '/inc/slider.php';
  * @since estate 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 789; /* pixels */
+	$content_width = 632; /* pixels */
 
 if ( ! function_exists( 'estate_setup' ) ) :
 /**
