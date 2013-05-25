@@ -23,6 +23,7 @@ spritemapper.output_css = style.sprites.css
 
 body {
 	background: #f1f1f1;
+	word-wrap: break-word;
 }
 
 body,
@@ -32,7 +33,7 @@ select,
 textarea {
 	color: #333;
 	font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	line-height: 1.5;
+	line-height: 1.5em;
 	font-size: 14px;
 }
 
@@ -364,7 +365,7 @@ textarea {
 	.box-shadow(~"inset 0 1px 0 rgba(255,255,255,0.15)");
 
 	border-top: 1px solid #101010;
-	border-bottom: 1px solid #111;
+	border-bottom: 1px solid #111111;
 
 	.noise {
 		/* Add the gradient noise */
@@ -558,6 +559,15 @@ textarea {
 					text-decoration: underline;
 				}
 			}
+
+			ul, ol {
+				margin-left: 1em;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 
 		/* Search input */
@@ -1066,6 +1076,10 @@ body.page-template-template-full-php #primary {
 			font-size: 15px;
 			color: #CCC;
 			margin-bottom: 20px;
+		}
+
+		a {
+			color: #777;
 		}
 	}
 }
