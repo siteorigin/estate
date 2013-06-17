@@ -32,3 +32,6 @@ Fixed full width template.
 Fixes some theme settings.
 Updated to latest framework.
 CSS improvements.
+
+**1.0.4**
+Updated to latest framework.
