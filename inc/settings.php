@@ -1,8 +1,6 @@
 <?php
 /**
- * Custom functions that act independently of the theme templates
- *
- * Eventually, some of the functionality here could be replaced by core features
+ * Configure settings for the theme.
  *
  * @package estate
  * @since estate 1.0
@@ -69,6 +67,7 @@ function estate_theme_setting_defaults($defaults){
 	$defaults['general_site_description'] = true;
 	$defaults['general_menu_search'] = false;
 
+	$defaults['banner_image'] = false;
 	$defaults['banner_type'] = 'title_banner';
 	$defaults['banner_color'] = '#1c1c1c';
 	$defaults['banner_title'] = __('Your Banner Title Goes Here', 'estate');
