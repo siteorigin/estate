@@ -24,6 +24,11 @@ include get_template_directory() . '/inc/template-tags.php';
 include get_template_directory() . '/inc/gallery.php';
 include get_template_directory() . '/inc/slider.php';
 
+if( file_exists(get_template_directory().'/premium/functions.php') ) {
+	// Include the premium file if it exists.
+	include get_template_directory().'/premium/functions.php';
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
@@ -58,7 +63,6 @@ function estate_setup() {
 	// Add support for custom backgrounds.
 	add_theme_support( 'custom-background' , array(
 		'default-color' => 'f1f1f1',
-		//'default-image' => get_template_directory_uri().'/images/bg.png'
 	));
 	
 	// This theme uses wp_nav_menu() in one location.
