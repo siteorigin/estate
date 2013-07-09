@@ -5,7 +5,7 @@ Estate is a free, general purpose theme.
 
 License
 ---------------
-This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.
+This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others. Both Estate and Estate premium are licensed under GPL.
 
 All Javascript is located in /js/ with license headers where appropriate.
 
