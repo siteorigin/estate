@@ -160,7 +160,6 @@ function estate_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'estate-main' , get_template_directory_uri().'/js/jquery.theme-main.js' , array('jquery', 'flexslider', 'fitvids'), SITEORIGIN_THEME_VERSION );
-	wp_enqueue_script( 'estate-top-slider' , get_template_directory_uri().'/js/top-slider.js' , array('jquery'), SITEORIGIN_THEME_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -1363,10 +1363,7 @@ body.page-template-template-full-php #primary {
 #top-slider .slides .slide .slide-contents {
   zoom: 1;
   width: 1040px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -520px;
+  margin: 0 auto;
 }
 #top-slider .slides .slide .slide-contents:before {
   content: '';
@@ -1387,12 +1384,14 @@ body.page-template-template-full-php #primary {
   font-size: 38px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
+  line-height: 1.15em;
 }
 #top-slider .slides .slide .slide-contents h4 {
   color: #FFF;
   font-size: 19px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   margin-bottom: 30px;
+  line-height: 1.2em;
 }
 #top-slider .slides .slide .slide-contents .subtext {
   color: #EEE;
