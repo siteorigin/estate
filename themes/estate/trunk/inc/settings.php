@@ -17,6 +17,7 @@ function estate_theme_settings(){
 	siteorigin_settings_add_section('general', __('General', 'estate'));
 	siteorigin_settings_add_section('banner', __('Home Banner', 'estate'));
 	siteorigin_settings_add_section('layout', __('Layout', 'estate'));
+	siteorigin_settings_add_section('text', __('Site Text', 'estate'));
 
 	/**
 	 * General Settings
@@ -92,6 +93,10 @@ function estate_theme_settings(){
 		'description' => __('A single button nested menu is displayed for mobile devices.','estate')
 	) );
 
+	siteorigin_settings_add_field('text', 'footer_text', 'text', __('Footer Text', 'estate'), array(
+		'description' => __('The footer text, ideal for copyright information', 'estate'),
+	) );
+
 }
 add_action('admin_init', 'estate_theme_settings');
 
@@ -119,6 +124,8 @@ function estate_theme_setting_defaults($defaults){
 
 	$defaults['layout_responsive'] = true;
 	$defaults['layout_responsive_menu'] = true;
+
+	$defaults['text_footer_text'] = '';
 
 	return $defaults;
 }
