@@ -3,6 +3,7 @@
 define('SITEORIGIN_IS_PREMIUM', true);
 
 include get_template_directory().'/premium/extras/ajax-comments/ajax-comments.php';
+include get_template_directory().'/premium/extras/css/css.php';
 include get_template_directory().'/premium/settings.php';
 
 /**
