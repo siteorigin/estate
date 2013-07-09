@@ -3,7 +3,16 @@
 function estate_display_top_slider(){
 	if( is_front_page() && $GLOBALS['wp_query']->get('paged') == 0 ) {
 
-		if(siteorigin_setting('banner_type') == 'title_banner' ){
+
+		if(substr(siteorigin_setting('banner_type'), 0, 5) == 'meta:' && class_exists('MetaSliderPlugin')){
+			$slider_id = intval(substr(siteorigin_setting('banner_type'), 5));
+			?>
+			<div id="top-slider">
+				<?php echo do_shortcode("[metaslider id='".$slider_id."']"); ?>
+			</div>
+			<?php
+		}
+		elseif(siteorigin_setting('banner_type') == 'title_banner' ){
 			$image = siteorigin_setting('banner_image');
 			if(empty($image)){
 				$image = get_template_directory_uri().'/images/home.jpg';

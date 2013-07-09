@@ -15,6 +15,7 @@ include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
 include get_template_directory() . '/extras/updater/updater.php';
+include get_template_directory() . '/extras/premium/premium.php';
 
 // Load the theme specific files
 include get_template_directory() . '/inc/panels.php';
@@ -24,9 +25,12 @@ include get_template_directory() . '/inc/template-tags.php';
 include get_template_directory() . '/inc/gallery.php';
 include get_template_directory() . '/inc/slider.php';
 
-if( file_exists(get_template_directory().'/premium/functions.php') ) {
+if( file_exists(get_template_directory().'/premium/functions.php') && false) {
 	// Include the premium file if it exists.
 	include get_template_directory().'/premium/functions.php';
+}
+else {
+	include get_template_directory().'/upgrade/upgrade.php';
 }
 
 /**
@@ -78,11 +82,15 @@ function estate_setup() {
 	 */
 	add_theme_support( 'siteorigin-panels', array(
 		'margin-bottom' => 30,
-		'responsive' => false,
+		'responsive' => siteorigin_setting('layout_responsive'),
 		'home-page' => true,
 		'home-page-default' => false,
 	) );
-	
+
+	add_theme_support('siteorigin-premium-teaser', array(
+		'customizer' => true,
+	));
+
 	set_post_thumbnail_size(632, 216, true);
 	add_image_size('estate-slide', 960, 480, true);
 
@@ -163,20 +171,6 @@ function estate_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'estate_scripts' );
-
-/**
- * Add custom body classes.
- * 
- * @param $classes
- * @package estate
- * @since 1.0
- */
-function estate_premium_body_class($classes){
-	// We'll add responsive layout in a future release.
-	//if(siteorigin_setting('layout_responsive')) $classes[] = 'responsive';
-	return $classes;
-}
-add_filter('body_class', 'estate_premium_body_class');
 
 /**
  * Add fixes for older version of Internet Explorer
