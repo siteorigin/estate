@@ -191,3 +191,10 @@ function estate_post_class($classes) {
 	return $classes;
 }
 add_filter('post_class', 'estate_post_class');
+
+function estate_footer_text(){
+	if(siteorigin_setting('text_footer_text') != ''){
+		echo wp_kses_post(siteorigin_setting('text_footer_text'));
+	}
+}
+add_action('estate_credits', 'estate_footer_text');
