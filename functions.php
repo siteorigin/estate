@@ -25,7 +25,7 @@ include get_template_directory() . '/inc/template-tags.php';
 include get_template_directory() . '/inc/gallery.php';
 include get_template_directory() . '/inc/slider.php';
 
-if( file_exists(get_template_directory().'/premium/functions.php') && false) {
+if( file_exists(get_template_directory().'/premium/functions.php') ) {
 	// Include the premium file if it exists.
 	include get_template_directory().'/premium/functions.php';
 }
