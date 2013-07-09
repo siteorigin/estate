@@ -5,7 +5,7 @@ function estate_premium_upgrade_content($content){
 	$content['premium_summary'] = __("If you've enjoyed using Estate, you're going to love Estate Premium. It's a robust upgrade to Estate that gives you loads of cool features. You choose the price, so you can decide what it's worth to give your site a professional edge.", 'estate');
 
 	$content['buy_url'] = 'http://siteorigin.fetchapp.com/sell/vdddaeng';
-	//$content['premium_video_poster'] = get_template_directory_uri().'/upgrade/poster.jpg';
+	$content['premium_video_poster'] = get_template_directory_uri().'/upgrade/poster.jpg';
 	//$content['premium_video_id'] = '52853957';
 
 	$content['features'] = array();
