@@ -15,6 +15,7 @@ include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
 include get_template_directory() . '/extras/updater/updater.php';
+include get_template_directory() . '/extras/update/update.php';
 include get_template_directory() . '/extras/premium/premium.php';
 
 // Load the theme specific files
@@ -194,7 +195,7 @@ add_filter('post_class', 'estate_post_class');
 
 function estate_footer_text(){
 	if(siteorigin_setting('text_footer_text') != ''){
-		echo wp_kses_post(siteorigin_setting('text_footer_text'));
+		echo wp_kses_post( siteorigin_setting('text_footer_text') );
 	}
 }
 add_action('estate_credits', 'estate_footer_text');

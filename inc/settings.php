@@ -68,8 +68,8 @@ function estate_theme_settings(){
 		'options' => $options,
 		'description' => sprintf(
 			__('This theme supports <a href="%s" target="_blank">Meta Slider</a>. <a href="%s">Install it</a> for free to create responsive, animated sliders - <a href="%s" target="_blank">More Info</a>', 'estate'),
-			'http://go.siteorigin.com/metaslider/',
-			siteorigin_plugin_activation_install_url('ml-slider', __('Meta Slider', 'estate'), 'http://gpriday.s3.amazonaws.com/plugins/ml-slider.zip'),
+			'http://sorig.in/metaslider',
+			siteorigin_plugin_activation_install_url('ml-slider', __('Meta Slider', 'estate'), 'http://sorig.in/ml-slider'),
 			'http://siteorigin.com/estate-documentation/sliders/'
 		)
 	));
