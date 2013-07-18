@@ -39,3 +39,6 @@ Updated to latest framework.
 **1.1**
 Added premium update information.
 CSS fixes and changes.
+
+**1.1.1**
+Fixed premium version updater.
