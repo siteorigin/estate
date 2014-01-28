@@ -17,7 +17,7 @@ This theme is originally based on Underscores (_s) starter theme http://undersco
 Change Log
 ---------------
 
-**1.1.2** (development)
+**1.1.2**
 * Updated to latest framework.
 * Fixed non responsive layout on mobile devices.
 
