@@ -82,7 +82,7 @@ function estate_setup() {
 	 */
 	add_theme_support( 'siteorigin-panels', array(
 		'margin-bottom' => 30,
-		'responsive' => siteorigin_setting('layout_responsive'),
+		'responsive' => siteorigin_setting('layout_responsive') && function_exists('estate_premium_responsive_header'),
 		'home-page' => true,
 		'home-page-default' => false,
 	) );
