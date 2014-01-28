@@ -17,28 +17,32 @@ This theme is originally based on Underscores (_s) starter theme http://undersco
 Change Log
 ---------------
 
-**1.0**
-Initial release.
-
-**1.0.1**
-General bug fixes.
-
-**1.0.2**
-Improved compatibility with latest version of Page Builder.
-All default widgets now available in Page Builder.
-Fixed full width template.
-
-**1.0.3**
-Fixes some theme settings.
-Updated to latest framework.
-CSS improvements.
-
-**1.0.4**
-Updated to latest framework.
-
-**1.1**
-Added premium update information.
-CSS fixes and changes.
+**1.1.2** (development)
+* Updated to latest framework.
+* Fixed non responsive layout on mobile devices.
 
 **1.1.1**
-Fixed premium version updater.
+* Fixed premium version updater.
+
+**1.1**
+* Added premium update information.
+* CSS fixes and changes.
+
+**1.0.4**
+* Updated to latest framework.
+
+**1.0.3**
+* Fixes some theme settings.
+* Updated to latest framework.
+* CSS improvements.
+
+**1.0.2**
+* Improved compatibility with latest version of Page Builder.
+* All default widgets now available in Page Builder.
+* Fixed full width template.
+
+**1.0.1**
+* General bug fixes.
+
+**1.0**
+* Initial release.

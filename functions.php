@@ -14,7 +14,6 @@ define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.localhost');
 include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
 include get_template_directory() . '/extras/plugin-activation/plugin-activation.php';
-include get_template_directory() . '/extras/updater/updater.php';
 include get_template_directory() . '/extras/update/update.php';
 include get_template_directory() . '/extras/premium/premium.php';
 
@@ -199,3 +198,13 @@ function estate_footer_text(){
 	}
 }
 add_action('estate_credits', 'estate_footer_text');
+
+/**
+ * Add the responsive layout
+ */
+function estate_viewport_header(){
+	if( !siteorigin_setting('layout_responsive') ) {
+		?><meta name="viewport" content="width=1080" /><?php
+	}
+}
+add_action('wp_head', 'estate_viewport_header');
