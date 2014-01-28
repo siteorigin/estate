@@ -203,7 +203,7 @@ add_action('estate_credits', 'estate_footer_text');
  * Add the responsive layout
  */
 function estate_viewport_header(){
-	if( !siteorigin_setting('layout_responsive') ) {
+	if( !siteorigin_setting('layout_responsive') || !function_exists('estate_premium_responsive_header') ) {
 		?><meta name="viewport" content="width=1080" /><?php
 	}
 }
