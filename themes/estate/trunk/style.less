@@ -333,6 +333,7 @@ textarea {
 	background: #F1F1F1;
 
 	hgroup {
+		.box-sizing(border-box);
 		width: @container_width;
 		margin: 0 auto;
 		padding: 40px 0;
@@ -505,6 +506,10 @@ textarea {
 	background: white;
 	position: relative;
 
+	.container {
+
+	}
+
 	#main-shadow {
 		position: absolute;
 		top: 0;
@@ -660,6 +665,10 @@ article.sticky{
 		margin-bottom: 25px;
 	}
 
+	.entry-content:last-child {
+		margin-bottom: 0;
+	}
+
 	footer.entry-meta {
 		color: #999;
 
@@ -781,7 +790,7 @@ article.sticky{
 		height: auto;
 	}
 
-/* WordPress Images */
+	/* WordPress Images */
 
 	.wp-caption{
 		max-width: 100%;

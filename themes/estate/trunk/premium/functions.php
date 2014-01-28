@@ -28,7 +28,7 @@ function estate_premium_filter_attribution($text){
 add_filter('siteorigin_attribution_footer', 'estate_premium_filter_attribution');
 
 /**
- *
+ * Add the responsive layout
  */
 function estate_premium_responsive_header(){
 	if(siteorigin_setting('layout_responsive')) {
