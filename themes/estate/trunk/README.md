@@ -18,6 +18,9 @@ Change Log
 ---------------
 
 **1.1.2**
+* Fixed home page slider.
+
+**1.1.2**
 * Updated to latest framework.
 * Fixed non responsive layout on mobile devices.
 

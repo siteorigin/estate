@@ -1362,6 +1362,9 @@ body.page-template-template-full-php #primary {
 #top-slider .flexslider {
   margin-bottom: 0;
 }
+#top-slider .metaslider {
+  margin: 0 auto;
+}
 #top-slider .slides .slide {
   position: relative;
   overflow: hidden;
