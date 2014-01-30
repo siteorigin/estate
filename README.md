@@ -17,7 +17,7 @@ This theme is originally based on Underscores (_s) starter theme http://undersco
 Change Log
 ---------------
 
-**1.1.3**
+**1.1.2**
 * Fixed home page slider.
 
 **1.1.2**
