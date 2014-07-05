@@ -3,7 +3,7 @@ Theme Name: Estate
 Author: SiteOrigin
 Author URI: http://siteorigin.com/
 Theme URI: http://siteorigin.com/theme/estate/
-Description: Estate is a clean, flexible business theme. It's well suited to business, portfolio and personal websites. One of Estate's best features is its Page Builder integration. Install Page Builder in a few clicks and you'll be able to create unique page layouts using a drag and drop interface. You can use this to create anything from menus for restaurant sites to marketing squeeze pages. Estate is an actively developed, continually updated theme.
+Description: Estate is a clean, flexible business theme. It's well suited to business, portfolio and personal websites. One of Estate's best features is its Page Builder integration. Install Page Builder in a few clicks and you'll be able to create unique page layouts using a drag and drop interface. You can use this to create anything from menus for restaurant sites to marketing squeeze pages. Estate is an actively developed, continually updated theme. We offer free and premium support on our support <a href="http://siteorigin.com/thread/">forums</a> (http://siteorigin.com/thread/).
 Version: trunk
 License: GNU General Public License 2.0
 License URI: license.txt
@@ -84,16 +84,12 @@ td {
 html {
   font-size: 62.5%;
   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-
   overflow-y: scroll;
   /* Keeps page centred in all browsers regardless of content height */
-
   -webkit-text-size-adjust: 100%;
   /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-
   -ms-text-size-adjust: 100%;
   /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-
 }
 body {
   background: #fff;
@@ -116,7 +112,6 @@ ul {
 }
 table {
   /* tables still need 'cellspacing="0"' in the markup */
-
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -142,7 +137,6 @@ a:focus {
 a:hover,
 a:active {
   /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
-
   outline: 0;
 }
 a img {
@@ -287,13 +281,10 @@ input,
 select,
 textarea {
   /* Corrects font size not being inherited in all browsers */
-
   font-size: 100%;
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-
   margin: 0;
   /* Improves appearance and consistency in all browsers */
-
   vertical-align: baseline;
   *vertical-align: middle;
   -ms-box-sizing: border-box;
@@ -304,10 +295,8 @@ textarea {
 button,
 input {
   /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-
   line-height: normal;
   /* Corrects inner spacing displayed oddly in IE6/7 */
-
   *overflow: visible;
 }
 button,
@@ -332,10 +321,8 @@ input[type="submit"] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   color: rgba(0, 0, 0, 0.8);
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
-
   cursor: pointer;
   /* Corrects inability to style clickable 'input' types in iOS */
-
   -webkit-appearance: button;
   font-size: 0.75em;
   font-weight: 500;
@@ -367,14 +354,11 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
   /* Addresses excess padding in IE8/9 */
-
 }
 input[type="search"] {
   /* Addresses appearance set to searchfield in S5, Chrome */
-
   -webkit-appearance: textfield;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -382,13 +366,11 @@ input[type="search"] {
 }
 input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-
   -webkit-appearance: none;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-
   border: 0;
   padding: 0;
 }
@@ -417,10 +399,8 @@ input[type=password] {
 }
 textarea {
   /* Removes default vertical scrollbar in IE6/7/8/9 */
-
   overflow: auto;
   /* Improves readability and alignment in all browsers */
-
   vertical-align: top;
 }
 /* Alignment */
@@ -443,7 +423,6 @@ textarea {
 .assistive-text {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
-
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
@@ -465,7 +444,7 @@ textarea {
 #masthead {
   background: #F1F1F1;
 }
-#masthead hgroup {
+#masthead .hgroup {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -474,18 +453,18 @@ textarea {
   margin: 0 auto;
   padding: 40px 0;
 }
-#masthead hgroup .site-title {
+#masthead .hgroup .site-title {
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 2px;
   line-height: 1;
   color: #3c3c3c;
 }
-#masthead hgroup .site-title a {
+#masthead .hgroup .site-title a {
   text-decoration: none;
   color: inherit;
 }
-#masthead hgroup .site-description {
+#masthead .hgroup .site-description {
   color: #555;
   font-size: 13px;
 }
@@ -509,7 +488,6 @@ textarea {
 }
 .main-navigation .noise {
   /* Add the gradient noise */
-
   background: url(images/decoration/noise.png);
 }
 .main-navigation ul {
@@ -562,9 +540,7 @@ textarea {
 }
 .main-navigation ul {
   /* Second level menu items */
-
   /* Third level menu items */
-
 }
 .main-navigation ul ul {
   padding-top: 1px;
@@ -580,7 +556,6 @@ textarea {
 }
 .main-navigation ul ul li:first-child {
   /* A subtle little shadow */
-
   -webkit-box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15);
@@ -595,7 +570,6 @@ textarea {
 }
 .main-navigation ul ul ul li:first-child {
   /* A subtle little shadow */
-
   -webkit-box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 5px 0 0 rgba(0, 0, 0, 0.15);
@@ -703,7 +677,6 @@ textarea {
 #secondary .widget {
   margin-bottom: 40px;
   /* Search input */
-
 }
 #secondary .widget:last-child {
   margin-bottom: 0;
@@ -768,7 +741,6 @@ textarea {
 ----------------------------------------------- */
 article.sticky {
   /* Style a sticky post */
-
 }
 .page-header h1 {
   font-size: 24px;
@@ -834,7 +806,6 @@ article.sticky {
   line-height: 1.6em;
   color: #555;
   /* WordPress Images */
-
 }
 .entry-content:before {
   content: '';
@@ -937,12 +908,10 @@ article.sticky {
 }
 .entry-content .alignleft {
   /* This is also styled on a global level */
-
   margin: 0 0 1.5em 1.5em;
 }
 .entry-content .alignright {
   /* This is also styled on a global level */
-
   margin: 0 1.5em 1.5em 0;
 }
 .entry-content img.wp-smiley {
@@ -1096,7 +1065,6 @@ body.page-template-template-full-php #primary {
 }
 #comments .commentlist .bypostauthor {
   /* Change the comment by the post author */
-
 }
 #commentform label {
   margin-top: 2px;
@@ -1595,7 +1563,6 @@ body.page-template-template-full-php #primary {
   right: 30px;
   margin-top: -19px;
   /* This should be half the height of the button */
-
 }
 /* Responsive styles for the call to action widget */
 @media (max-width: 680px) {
