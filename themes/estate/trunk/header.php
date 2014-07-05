@@ -24,7 +24,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		<div class="hgroup">
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php estate_display_logo(); ?>
@@ -33,7 +33,7 @@
 			<?php if(siteorigin_setting('general_site_description')) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif ?>
-		</hgroup>
+		</div>
 
 		<nav role="navigation" class="site-navigation main-navigation primary"><div class="noise">
 

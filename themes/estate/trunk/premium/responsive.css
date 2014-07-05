@@ -1,6 +1,6 @@
 @media (max-width: 1100px) {
   body.responsive .container,
-  body.responsive #masthead hgroup,
+  body.responsive #masthead .hgroup,
   body.responsive #main,
   body.responsive #top-slider .slides .slide .slide-contents {
     width: auto;
@@ -21,7 +21,7 @@
     padding-right: 0;
   }
   body.responsive .container,
-  body.responsive #masthead hgroup,
+  body.responsive #masthead .hgroup,
   body.responsive #main,
   body.responsive #top-slider .slides .slide .slide-contents {
     width: auto;

@@ -28,6 +28,12 @@ function estate_theme_settings(){
 		'update' => __('Set Logo', 'estate'),
 	));
 
+	siteorigin_settings_add_teaser('general', 'logo_retina', __('Retina Logo', 'estate'), array(
+		'choose' => __('Choose Image', 'estate'),
+		'update' => __('Set Logo', 'estate'),
+		'description' => __('A double sized version of your logo for retina displays. Must be used in addition to standard logo.', 'estate'),
+	) );
+
 	siteorigin_settings_add_field('general', 'site_description', 'checkbox', __('Site Description', 'estate'), array(
 		'description' => __('Display your site description under your logo.', 'estate')
 	));

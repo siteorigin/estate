@@ -9,13 +9,31 @@ This theme, like WordPress, is licensed under the GPL. Use it to make something 
 
 All Javascript is located in /js/ with license headers where appropriate.
 
-All photographs have been sourced from Pixabay and are licensed under the public domain.
+Demo Photos
+---------------
+Demo photo was sourced from Pixabay. The full public domain license was confirmed by the author via an email.
+
+http://pixabay.com/en/calgary-canada-downtown-cities-70848/
 
 This theme is originally based on Underscores (_s) starter theme http://underscores.me/
 
 
 Change Log
 ---------------
+
+**1.1.5**
+* Updated to latest framework.
+* Ensured all photos are GPL compatible.
+* Removed hgroup tag.
+* Added step to remove template-blog.php page template.
+* Added new language files.
+* Improved support for new Page Builder home page.
+* Updated to latest version of FitVids
+* Premium: Added retina logo theme setting.
+
+**1.1.4**
+* Updated to latest framework.
+* Fixed logo incompatibility with Jetpack Photon.
 
 **1.1.3**
 * Fixed home page slider.

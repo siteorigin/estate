@@ -145,14 +145,38 @@ function estate_display_logo(){
 		bloginfo( 'name' );
 		return;
 	}
-	
-	// load the logo image
+
 	$image = wp_get_attachment_image_src($logo, 'full');
+	$src = $image[0];
 	$height = $image[2];
 	$width = $image[1];
 
-	// echo $image;
-	?><img src="<?php echo $image[0] ?>" width="<?php echo round($width) ?>" height="<?php echo round($height) ?>" /><?php
+	// Add all the logo attributes
+	$logo_attributes = array(
+		'src' => $src,
+		'width' => round($width),
+		'height' => round($height),
+		'alt' => sprintf( __('%s Logo', 'estate'), get_bloginfo('name') ),
+	);
+	if( siteorigin_setting('general_logo_retina') ) {
+		$retina_image = wp_get_attachment_image_src(siteorigin_setting('general_logo_retina'), 'full');
+		$logo_attributes['data-retina-image'] = $retina_image[0];
+	}
+
+	$logo_attributes = apply_filters('estate_logo_image_attributes', $logo_attributes);
+
+	$logo_attributes_str = array();
+	if( !empty( $logo_attributes ) ) {
+		foreach($logo_attributes as $name => $val) {
+			if( empty($val) ) continue;
+			$logo_attributes_str[] = $name.'="'.esc_attr($val).'" ';
+		}
+	}
+
+	$logo_html = apply_filters('estate_logo_image', '<img '.implode( ' ', $logo_attributes_str ).' />');
+
+	// Echo the image
+	echo apply_filters('estate_logo_html', $logo_html);
 }
 endif;
 

@@ -85,6 +85,7 @@ function estate_setup() {
 		'responsive' => siteorigin_setting('layout_responsive') && function_exists('estate_premium_responsive_header'),
 		'home-page' => true,
 		'home-page-default' => false,
+		'home-page-template' => 'home-panels.php',
 	) );
 
 	add_theme_support('siteorigin-premium-teaser', array(
@@ -149,7 +150,7 @@ add_action( 'widgets_init', 'estate_widgets_init' );
  */
 function estate_register_scripts(){
 	wp_register_script( 'flexslider' , get_template_directory_uri().'/js/jquery.flexslider.js' , array('jquery'), '2.1' );
-	wp_register_script( 'fitvids' , get_template_directory_uri().'/js/jquery.fitvids.js' , array('jquery'), '1.0' );
+	wp_register_script( 'fitvids' , get_template_directory_uri().'/js/jquery.fitvids.js' , array('jquery'), '1.1' );
 }
 add_action( 'wp_enqueue_scripts', 'estate_register_scripts' , 5);
 
