@@ -5,9 +5,47 @@ Estate is a free, general purpose theme.
 
 License
 ---------------
-This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others. Both Estate and Estate premium are licensed under GPL.
+Estate WordPress Theme, Copyright 2013 Greg Priday
+Estate is distributed under the terms of the GNU GPL
 
-All Javascript is located in /js/ with license headers where appropriate.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/copyleft/gpl.html.
+
+Estate WordPress Theme is derived from Underscores WordPress Theme, Copyright 2012 Automattic http://underscores.me/
+Underscores WordPress Theme is distributed under the terms of the GNU GPL
+
+Estate WordPress Theme bundles the following third-party resources:
+
+HTML5 Shiv, Copyright 2011 Alexander Farkas
+Released under a dual MIT/GPL2 License
+Source: https://code.google.com/p/html5shiv/
+
+FitVids, Copyright 2013 Chris Coyier
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Source: http://fitvidsjs.com/
+
+Flex Slider, Copyright 2012 WooThemes
+Free to use under the GPLv2 license.
+Source: http://www.woothemes.com/flexslider/
+
+Selectivizr, Copyright 2011 Keith Clark
+Freely distributable under the terms of the MIT license
+
+LESS Elements, Copyright 2011 Dmitry Fadeyev
+Dedicated to the public domain and is free for all uses, commercial or otherwise.
+
+FontAwesome Copyright 2012 Dave Gandy
+licensed under SIL OFL 1.1 <http://scripts.sil.org/OFL>
 
 Demo Photos
 ---------------
@@ -15,13 +53,11 @@ Demo photo was sourced from Pixabay. The full public domain license was confirme
 
 http://pixabay.com/en/calgary-canada-downtown-cities-70848/
 
-This theme is originally based on Underscores (_s) starter theme http://underscores.me/
-
 
 Change Log
 ---------------
 
-**1.1.5**
+**1.2**
 * Updated to latest framework.
 * Ensured all photos are GPL compatible.
 * Removed hgroup tag.
