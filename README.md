@@ -66,6 +66,7 @@ Change Log
 * Improved support for new Page Builder home page.
 * Updated to latest version of FitVids
 * Premium: Added retina logo theme setting.
+* Fixed button styles.
 
 **1.1.4**
 * Updated to latest framework.

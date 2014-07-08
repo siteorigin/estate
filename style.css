@@ -307,15 +307,15 @@ input[type="submit"] {
   -moz-border-radius: 3px;
   border-radius: 3px;
   background: #e6e6e6;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(#e6e6e6, 3.5)), color-stop(1, lumlighten(#e6e6e6, 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(#e6e6e6, 3.5), lumlighten(#e6e6e6, 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(#e6e6e6, 3.5) 0%, lumlighten(#e6e6e6, 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(#e6e6e6, 3.5), lumdarken(#e6e6e6, 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(#e6e6e6, 3.5)', endColorstr='lumdarken(#e6e6e6, 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(#e6e6e6, 18), 4);
-  border-left: solid 1px lumdarken(#e6e6e6, 18);
-  border-right: solid 1px lumdarken(#e6e6e6, 18);
-  border-bottom: solid 1px lumdarken(lumdarken(#e6e6e6, 18), 4);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dddddd), color-stop(1, #efefef));
+  background: -ms-linear-gradient(bottom, #dddddd, #efefef);
+  background: -moz-linear-gradient(center bottom, #dddddd 0%, #efefef 100%);
+  background: -o-linear-gradient(#efefef, #dddddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#dddddd', GradientType=0);
+  border-top: solid 1px #c2c2c2;
+  border-left: solid 1px #b8b8b8;
+  border-right: solid 1px #b8b8b8;
+  border-bottom: solid 1px #aeaeae;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -335,16 +335,16 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background: lumlighten(#e6e6e6, 2%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(lumlighten(#e6e6e6, 2%), 3.5)), color-stop(1, lumlighten(lumlighten(#e6e6e6, 2%), 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(lumlighten(#e6e6e6, 2%), 3.5), lumlighten(lumlighten(#e6e6e6, 2%), 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(lumlighten(#e6e6e6, 2%), 3.5) 0%, lumlighten(lumlighten(#e6e6e6, 2%), 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(lumlighten(#e6e6e6, 2%), 3.5), lumdarken(lumlighten(#e6e6e6, 2%), 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(lumlighten(#e6e6e6, 2%), 3.5)', endColorstr='lumdarken(lumlighten(#e6e6e6, 2%), 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(lumlighten(#e6e6e6, 2%), 18), 4);
-  border-left: solid 1px lumdarken(lumlighten(#e6e6e6, 2%), 18);
-  border-right: solid 1px lumdarken(lumlighten(#e6e6e6, 2%), 18);
-  border-bottom: solid 1px lumdarken(lumdarken(lumlighten(#e6e6e6, 2%), 18), 4);
+  background: #ebebeb;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e2e2e2), color-stop(1, #f4f4f4));
+  background: -ms-linear-gradient(bottom, #e2e2e2, #f4f4f4);
+  background: -moz-linear-gradient(center bottom, #e2e2e2 0%, #f4f4f4 100%);
+  background: -o-linear-gradient(#f4f4f4, #e2e2e2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e2e2e2', GradientType=0);
+  border-top: solid 1px #c7c7c7;
+  border-left: solid 1px #bdbdbd;
+  border-right: solid 1px #bdbdbd;
+  border-bottom: solid 1px #b3b3b3;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -724,15 +724,15 @@ textarea {
   -moz-border-radius: 2px;
   border-radius: 2px;
   background: #444444;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(#444444, 3.5)), color-stop(1, lumlighten(#444444, 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(#444444, 3.5), lumlighten(#444444, 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(#444444, 3.5) 0%, lumlighten(#444444, 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(#444444, 3.5), lumdarken(#444444, 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(#444444, 3.5)', endColorstr='lumdarken(#444444, 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(#444444, 18), 4);
-  border-left: solid 1px lumdarken(#444444, 18);
-  border-right: solid 1px lumdarken(#444444, 18);
-  border-bottom: solid 1px lumdarken(lumdarken(#444444, 18), 4);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3b3b3b), color-stop(1, #4d4d4d));
+  background: -ms-linear-gradient(bottom, #3b3b3b, #4d4d4d);
+  background: -moz-linear-gradient(center bottom, #3b3b3b 0%, #4d4d4d 100%);
+  background: -o-linear-gradient(#4d4d4d, #3b3b3b);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#3b3b3b', GradientType=0);
+  border-top: solid 1px #202020;
+  border-left: solid 1px #161616;
+  border-right: solid 1px #161616;
+  border-bottom: solid 1px #0c0c0c;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
@@ -1410,30 +1410,30 @@ body.page-template-template-full-php #primary {
   -moz-border-radius: 4px;
   border-radius: 4px;
   background: #333333;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(#333333, 3.5)), color-stop(1, lumlighten(#333333, 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(#333333, 3.5), lumlighten(#333333, 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(#333333, 3.5) 0%, lumlighten(#333333, 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(#333333, 3.5), lumdarken(#333333, 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(#333333, 3.5)', endColorstr='lumdarken(#333333, 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(#333333, 18), 4);
-  border-left: solid 1px lumdarken(#333333, 18);
-  border-right: solid 1px lumdarken(#333333, 18);
-  border-bottom: solid 1px lumdarken(lumdarken(#333333, 18), 4);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2a2a2a), color-stop(1, #3c3c3c));
+  background: -ms-linear-gradient(bottom, #2a2a2a, #3c3c3c);
+  background: -moz-linear-gradient(center bottom, #2a2a2a 0%, #3c3c3c 100%);
+  background: -o-linear-gradient(#3c3c3c, #2a2a2a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3c3c3c', endColorstr='#2a2a2a', GradientType=0);
+  border-top: solid 1px #0f0f0f;
+  border-left: solid 1px #050505;
+  border-right: solid 1px #050505;
+  border-bottom: solid 1px #000000;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 2px rgba(0,0,0,0.15);
 }
 #top-slider .slides .slide .slide-contents .slide-button a.action-button:hover {
-  background: lumlighten(#333333, 1.75%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(lumlighten(#333333, 1.75%), 3.5)), color-stop(1, lumlighten(lumlighten(#333333, 1.75%), 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(lumlighten(#333333, 1.75%), 3.5), lumlighten(lumlighten(#333333, 1.75%), 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(lumlighten(#333333, 1.75%), 3.5) 0%, lumlighten(lumlighten(#333333, 1.75%), 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(lumlighten(#333333, 1.75%), 3.5), lumdarken(lumlighten(#333333, 1.75%), 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(lumlighten(#333333, 1.75%), 3.5)', endColorstr='lumdarken(lumlighten(#333333, 1.75%), 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(lumlighten(#333333, 1.75%), 18), 4);
-  border-left: solid 1px lumdarken(lumlighten(#333333, 1.75%), 18);
-  border-right: solid 1px lumdarken(lumlighten(#333333, 1.75%), 18);
-  border-bottom: solid 1px lumdarken(lumdarken(lumlighten(#333333, 1.75%), 18), 4);
+  background: #373737;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2f2f2f), color-stop(1, #404040));
+  background: -ms-linear-gradient(bottom, #2f2f2f, #404040);
+  background: -moz-linear-gradient(center bottom, #2f2f2f 0%, #404040 100%);
+  background: -o-linear-gradient(#404040, #2f2f2f);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#404040', endColorstr='#2f2f2f', GradientType=0);
+  border-top: solid 1px #141414;
+  border-left: solid 1px #0a0a0a;
+  border-right: solid 1px #0a0a0a;
+  border-bottom: solid 1px #000000;
 }
 #top-slider .slides .slide .slide-contents .image-content {
   padding-top: 50px;
@@ -1504,27 +1504,27 @@ body.page-template-template-full-php #primary {
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
   background: #bcdf74;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(#bcdf74, 3.5)), color-stop(1, lumlighten(#bcdf74, 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(#bcdf74, 3.5), lumlighten(#bcdf74, 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(#bcdf74, 3.5) 0%, lumlighten(#bcdf74, 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(#bcdf74, 3.5), lumdarken(#bcdf74, 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(#bcdf74, 3.5)', endColorstr='lumdarken(#bcdf74, 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(#bcdf74, 18), 4);
-  border-left: solid 1px lumdarken(#bcdf74, 18);
-  border-right: solid 1px lumdarken(#bcdf74, 18);
-  border-bottom: solid 1px lumdarken(lumdarken(#bcdf74, 18), 4);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b5dc65), color-stop(1, #c3e283));
+  background: -ms-linear-gradient(bottom, #b5dc65, #c3e283);
+  background: -moz-linear-gradient(center bottom, #b5dc65 0%, #c3e283 100%);
+  background: -o-linear-gradient(#c3e283, #b5dc65);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3e283', endColorstr='#b5dc65', GradientType=0);
+  border-top: solid 1px #a0d23a;
+  border-left: solid 1px #96c92e;
+  border-right: solid 1px #96c92e;
+  border-bottom: solid 1px #8ab82a;
 }
 .widget a.button:hover {
-  background: lumlighten(#bcdf74, 1.25%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, lumdarken(lumlighten(#bcdf74, 1.25%), 3.5)), color-stop(1, lumlighten(lumlighten(#bcdf74, 1.25%), 3.5)));
-  background: -ms-linear-gradient(bottom, lumdarken(lumlighten(#bcdf74, 1.25%), 3.5), lumlighten(lumlighten(#bcdf74, 1.25%), 3.5));
-  background: -moz-linear-gradient(center bottom, lumdarken(lumlighten(#bcdf74, 1.25%), 3.5) 0%, lumlighten(lumlighten(#bcdf74, 1.25%), 3.5) 100%);
-  background: -o-linear-gradient(lumlighten(lumlighten(#bcdf74, 1.25%), 3.5), lumdarken(lumlighten(#bcdf74, 1.25%), 3.5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lumlighten(lumlighten(#bcdf74, 1.25%), 3.5)', endColorstr='lumdarken(lumlighten(#bcdf74, 1.25%), 3.5)', GradientType=0);
-  border-top: solid 1px lumlighten(lumdarken(lumlighten(#bcdf74, 1.25%), 18), 4);
-  border-left: solid 1px lumdarken(lumlighten(#bcdf74, 1.25%), 18);
-  border-right: solid 1px lumdarken(lumlighten(#bcdf74, 1.25%), 18);
-  border-bottom: solid 1px lumdarken(lumdarken(lumlighten(#bcdf74, 1.25%), 18), 4);
+  background: #bee079;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b8dd6b), color-stop(1, #c5e488));
+  background: -ms-linear-gradient(bottom, #b8dd6b, #c5e488);
+  background: -moz-linear-gradient(center bottom, #b8dd6b 0%, #c5e488 100%);
+  background: -o-linear-gradient(#c5e488, #b8dd6b);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c5e488', endColorstr='#b8dd6b', GradientType=0);
+  border-top: solid 1px #a3d33f;
+  border-left: solid 1px #9ace2f;
+  border-right: solid 1px #9ace2f;
+  border-bottom: solid 1px #8ebe2c;
 }
 .widget .button-container.align-center {
   text-align: center;
