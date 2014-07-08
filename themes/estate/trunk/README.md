@@ -53,6 +53,7 @@ Demo photo was sourced from Pixabay. The full public domain license was confirme
 
 http://pixabay.com/en/calgary-canada-downtown-cities-70848/
 
+Bench photo in the theme screenshot was sourced from PublicDomainArchive.org and licensed under public domain.
 
 Change Log
 ---------------
