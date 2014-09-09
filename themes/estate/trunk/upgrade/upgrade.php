@@ -2,23 +2,13 @@
 
 function estate_premium_upgrade_content($content){
 	$content['premium_title'] = __('Upgrade To Estate Plus', 'estate');
-	$content['premium_summary'] = __("If you've enjoyed using Estate, you're going to love Estate Plus. It's a robust upgrade to Estate that gives you loads of cool features. You choose the price, so you can decide what it's worth to give your site a professional edge.", 'estate');
+	$content['premium_summary'] = __("If you've enjoyed using Estate, you're going to love Estate Plus. It's a robust upgrade to Estate that gives you loads of cool features. All you need to do is sign up to our newsletter and we'll send you the Plus plugin.", 'estate');
 
 	$content['free_download'] = true;
 	$content['buy_url'] = 'http://siteorigin.com/theme/estate/?action=plus';
 	$content['premium_video_poster'] = get_template_directory_uri().'/upgrade/poster.jpg';
 
 	$content['features'] = array();
-
-	$content['features'][] = array(
-		'heading' => __('Free Forum Support', 'estate'),
-		'content' => __("Need help setting up Estate? We provide free forum support for all our users.", 'estate'),
-	);
-
-	$content['features'][] = array(
-		'heading' => __('Name The Price', 'estate'),
-		'content' => __("You can choose exactly how much you pay for Estate Plus. Pay what ever you think the features are worth to you. Regardless, you're supporting the continued development of Estate.", 'estate'),
-	);
 
 	$content['features'][] = array(
 		'heading' => __("Responsive Features", 'estate'),
@@ -38,6 +28,16 @@ function estate_premium_upgrade_content($content){
 	$content['features'][] = array(
 		'heading' => __("CSS Editor", 'estate'),
 		'content' => __("A simple CSS editor that lets you easily add code that changes the look of Estate. You can count on our support staff to help you with CSS snippets to get the look you're after. Best of all, your changes will persist across updates.", 'estate'),
+	);
+
+	$content['features'][] = array(
+		'heading' => __('Free Forum Support', 'estate'),
+		'content' => __("Need help setting up Estate? We provide free forum support for all our users.", 'estate'),
+	);
+
+	$content['features'][] = array(
+		'heading' => __("Newsletter Updates", 'estate'),
+		'content' => __("By signing up to our newsletter, we'll keep you up to date with our free theme and plugin releases.", 'estate'),
 	);
 
 	$content['testimonials'] = array(
