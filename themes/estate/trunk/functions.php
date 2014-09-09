@@ -8,8 +8,6 @@
  */
 
 define('SITEORIGIN_THEME_VERSION', 'trunk');
-define('SITEORIGIN_THEME_UPDATE_ID', 279);
-define('SITEORIGIN_THEME_ENDPOINT', 'http://siteorigin.localhost');
 
 include get_template_directory() . '/extras/settings/settings.php';
 include get_template_directory() . '/extras/adminbar/adminbar.php';
@@ -25,11 +23,7 @@ include get_template_directory() . '/inc/template-tags.php';
 include get_template_directory() . '/inc/gallery.php';
 include get_template_directory() . '/inc/slider.php';
 
-if( file_exists(get_template_directory().'/premium/functions.php') ) {
-	// Include the premium file if it exists.
-	include get_template_directory().'/premium/functions.php';
-}
-else {
+if( !defined('SITEORIGIN_IS_PREMIUM') ) {
 	include get_template_directory().'/upgrade/upgrade.php';
 }
 
@@ -209,3 +203,13 @@ function estate_viewport_header(){
 	}
 }
 add_action('wp_head', 'estate_viewport_header');
+
+/**
+ * Change the name of Influence Premium.
+ *
+ * @return string
+ */
+function estate_premium_version_name() {
+	return __('Estate Plus', 'influence');
+}
+add_filter( 'siteorigin_premium_theme_name', 'estate_premium_version_name' );
