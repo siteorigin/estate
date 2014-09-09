@@ -58,6 +58,10 @@ Bench photo in the theme screenshot was sourced from PublicDomainArchive.org and
 Change Log
 ---------------
 
+**1.2.1**
+* Removed references to Estate Premium, changed to free Estate Plus upgrade.
+* Updated language files.
+
 **1.2**
 * Updated to latest framework.
 * Ensured all photos are GPL compatible.
